@@ -15,8 +15,19 @@ int main(int argc, char *argv[]) {
 	}
 
 	int ch;
+	int bytes = 0;
+	int total_bytes = 0;
+	int counter = 0;
+	printf("%d | ", counter);
 	while ((ch = fgetc(file)) != EOF) {
+		if (bytes == 16) {
+			counter++;
+			printf("\n%d | ", counter);
+			bytes = 0;
+		}
 		printf("%02X ", ch);
+		bytes++;
+		total_bytes++;
 	}
 
 	printf("\n");
