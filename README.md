@@ -4,4 +4,4 @@
 
 # TODO
 
-**Upgrade byte offset**
+**Add canonical option, displaying readable ASCII chars next to the raw data**
