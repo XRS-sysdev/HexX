@@ -22,7 +22,7 @@ int main(int argc, char *argv[]) {
 	while ((ch = fgetc(file)) != EOF) {
 		if (bytes == 16) {
 			counter++;
-			printf("\n%d | ", counter);
+			printf("\n%02X | ", (counter * 16));
 			bytes = 0;
 		}
 		printf("%02X ", ch);
